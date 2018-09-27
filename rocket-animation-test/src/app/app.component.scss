@@ -7,13 +7,13 @@
     height: 500px;
     width: 512px;
     overflow-y: hidden;
+    border-radius: 4px;
 
     .background {
       position: relative;
       width: 512px;
       height: 1000px;
-      border-radius: 4px;
-      background: linear-gradient(to bottom, #222222 0%, #006C90 50%, #2FB4E0 100%);
+      background: linear-gradient(to bottom, #222222 0%, #006C90 60%, #2FB4E0 100%);
       transition: all 900ms ease-in-out;
       transition-delay: 500ms;
       transform: translateY(-50%);
@@ -153,6 +153,37 @@
       40%, 60% {
         transform: translateX(4px);
       }
+    }
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  .launch-button {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ff0000;
+    color: #ffffff;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    transition: all 150ms ease-in-out;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.6);
+
+    &:hover {
+      background: #d30000;
+      transition: all 150ms ease-in-out;
+    }
+
+    &:active {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.9);
     }
   }
 }
