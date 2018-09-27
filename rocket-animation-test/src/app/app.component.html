@@ -1,79 +1,85 @@
 <div class="container">
-  <div class="background">
-    <svg class="floor">
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-        <path d="M1.5,1.25 L255.25,1.25" id="Line-2-Copy-6" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero"></path>
-      </g>
-    </svg>
-    <svg class="floor">
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-        <path d="M510.5,1.25 L255.25,1.25" id="Line-2-Copy-6" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero"></path>
-      </g>
-    </svg>
-    <svg class="tower tower-left">
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-18-Copy-5" fill-rule="nonzero">
-          <path d="M21.5,21.5 L21.5,0.5" id="Line-9" stroke="#FFFFFF" stroke-linecap="square"></path>
-          <path d="M14.8429655,22 L1.07427991,214 L42.917362,214 L27.6564084,22 L14.8429655,22 Z" id="Rectangle-10" stroke="#FFFFFF" stroke-width="2"></path>
-          <rect class="offset" id="Rectangle-21" stroke="#FFFFFF" stroke-width="2" x="15" y="22" width="13" height="3"></rect>
-          <rect class="offset" id="Rectangle-21-Copy" stroke="#FFFFFF" stroke-width="2" x="15" y="27" width="13" height="3"></rect>
+  <div class="background" [ngClass]="{'transition-sky': launchRocket}">
+    <div class="launch-pad" [ngClass]="{'remove-platform': launchRocket}">
+      <svg class="floor">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+          <path d="M1.5,1.25 L255.25,1.25" id="Line-2-Copy-6" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero"></path>
         </g>
-      </g>
-    </svg>
-    <svg class="tower-bg tower-bg-left">
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.199999988">
-        <g id="Group-18-Copy-8" transform="translate(0.000000, 1.000000)" fill-rule="nonzero">
-          <path d="M12.5,12.3835435 L12.5,0.287989383" id="Line-9" stroke="#FFFFFF" stroke-linecap="square"></path>
-          <path d="M8.83612254,13.6715328 L1.07352009,123 L23.9182102,123 L15.3142868,13.6715328 L8.83612254,13.6715328 Z" id="Rectangle-10" stroke="#FFFFFF" stroke-width="2"></path>
-          <rect class="offset" id="Rectangle-21" stroke="#FFFFFF" stroke-width="1" x="8.03571429" y="12.6715328" width="7.14285714" height="1.81021898"></rect>
-          <rect class="offset" id="Rectangle-21-Copy" stroke="#FFFFFF" stroke-width="1" x="8.03571429" y="15.3868613" width="7.14285714" height="1.81021898"></rect>
+      </svg>
+      <svg class="floor">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+          <path d="M510.5,1.25 L255.25,1.25" id="Line-2-Copy-6" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero"></path>
         </g>
-      </g>
-    </svg>
-    <svg class="base">
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-4-Copy-3" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
-          <path d="M13,16 L104,16 L104,4 C104,2.34314575 102.656854,1 101,1 L16,1 C14.3431458,1 13,2.34314575 13,4 L13,16 Z" id="Rectangle-2"></path>
-          <path d="M1,40 L117,40 L117,17 C117,16.4477153 116.552285,16 116,16 L2,16 C1.44771525,16 1,16.4477153 1,17 L1,40 Z" id="Rectangle"></path>
-        </g>
-      </g>
-    </svg>
-    <svg class="rocket">
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-6-Copy-3" transform="translate(1.000000, 2.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
-          <g id="Group-2">
-            <g id="Group-16">
-              <path d="M65.1600488,113.333333 C65.1600488,107.117198 65.1600488,90.5143664 65.1600488,63.5248384 C65.1600488,36.5353103 56.6189673,15.3603642 39.5368042,0" id="Path-16"></path>
-              <path d="M14.6478873,113.333333 C14.6478873,113.333333 14.6478873,108.078267 14.6478873,91.4754358 C14.6478873,35.574241 22.9441929,14.3992948 39.5368042,0" id="path-17"></path>
-              <circle id="Oval-2" cx="40" cy="61.4084507" r="12.9577465"></circle>
-              <polygon id="Path-25" points="65.5215669 76.0541373 79.9493838 92.6012324 79.9493838 123.908451 65.5215669 113.083187"></polygon>
-              <polygon id="Path-25" transform="translate(7.433979, 99.983495) scale(-1, 1) translate(-7.433979, -99.983495) " points="0.220070423 76.056338 14.6478873 92.6034331 14.6478873 123.910651 0.220070423 113.085387"></polygon>
-            </g>
-            <path d="M23.3301887,117.25 L57.6698113,117.25" id="Line" stroke-linecap="square"></path>
-            <path d="M29.3333333,123.208333 L53,123.208333" id="Line-Copy" stroke-linecap="square"></path>
+      </svg>
+      <svg class="tower tower-left">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Group-18-Copy-5" fill-rule="nonzero">
+            <path d="M21.5,21.5 L21.5,0.5" id="Line-9" stroke="#FFFFFF" stroke-linecap="square"></path>
+            <path d="M14.8429655,22 L1.07427991,214 L42.917362,214 L27.6564084,22 L14.8429655,22 Z" id="Rectangle-10" stroke="#FFFFFF" stroke-width="2"></path>
+            <rect class="offset" id="Rectangle-21" stroke="#FFFFFF" stroke-width="2" x="15" y="22" width="13" height="3"></rect>
+            <rect class="offset" id="Rectangle-21-Copy" stroke="#FFFFFF" stroke-width="2" x="15" y="27" width="13" height="3"></rect>
           </g>
         </g>
-      </g>
-    </svg>
-    <svg class="tower-bg tower-bg-right">
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.199999988">
-        <g id="Group-18-Copy-7" transform="translate(0.000000, 1.000000)" fill-rule="nonzero">
-          <path d="M12.5,12.3835435 L12.5,0.287989383" id="Line-9" stroke="#FFFFFF" stroke-linecap="square"></path>
-          <path d="M8.83612254,13.6715328 L1.07352009,123 L23.9182102,123 L15.3142868,13.6715328 L8.83612254,13.6715328 Z" id="Rectangle-10" stroke="#FFFFFF" stroke-width="2"></path>
-          <rect class="offset" id="Rectangle-21" stroke="#FFFFFF" stroke-width="1" x="8.03571429" y="12.6715328" width="7.14285714" height="1.81021898"></rect>
-          <rect class="offset" id="Rectangle-21-Copy" stroke="#FFFFFF" stroke-width="1" x="8.03571429" y="15.3868613" width="7.14285714" height="1.81021898"></rect>
+      </svg>
+      <svg class="tower-bg tower-bg-left">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.199999988">
+          <g id="Group-18-Copy-8" transform="translate(0.000000, 1.000000)" fill-rule="nonzero">
+            <path d="M12.5,12.3835435 L12.5,0.287989383" id="Line-9" stroke="#FFFFFF" stroke-linecap="square"></path>
+            <path d="M8.83612254,13.6715328 L1.07352009,123 L23.9182102,123 L15.3142868,13.6715328 L8.83612254,13.6715328 Z" id="Rectangle-10" stroke="#FFFFFF" stroke-width="2"></path>
+            <rect class="offset" id="Rectangle-21" stroke="#FFFFFF" stroke-width="1" x="8.03571429" y="12.6715328" width="7.14285714" height="1.81021898"></rect>
+            <rect class="offset" id="Rectangle-21-Copy" stroke="#FFFFFF" stroke-width="1" x="8.03571429" y="15.3868613" width="7.14285714" height="1.81021898"></rect>
+          </g>
         </g>
-      </g>
-    </svg>
-    <svg class="tower tower-right">
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-18-Copy-6" fill-rule="nonzero">
-          <path d="M21.5,21.5 L21.5,0.5" id="Line-9" stroke="#FFFFFF" stroke-linecap="square"></path>
-          <path d="M14.8429655,22 L1.07427991,214 L42.917362,214 L27.6564084,22 L14.8429655,22 Z" id="Rectangle-10" stroke="#FFFFFF" stroke-width="2"></path>
-          <rect class="offset" id="Rectangle-21" stroke="#FFFFFF" stroke-width="2" x="15" y="22" width="13" height="3"></rect>
-          <rect class="offset" id="Rectangle-21-Copy" stroke="#FFFFFF" stroke-width="2" x="15" y="27" width="13" height="3"></rect>
+      </svg>
+      <svg class="base">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Group-4-Copy-3" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
+            <path d="M13,16 L104,16 L104,4 C104,2.34314575 102.656854,1 101,1 L16,1 C14.3431458,1 13,2.34314575 13,4 L13,16 Z" id="Rectangle-2"></path>
+            <path d="M1,40 L117,40 L117,17 C117,16.4477153 116.552285,16 116,16 L2,16 C1.44771525,16 1,16.4477153 1,17 L1,40 Z" id="Rectangle"></path>
+          </g>
         </g>
-      </g>
-    </svg>
+      </svg>
+      <svg class="tower-bg tower-bg-right">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.199999988">
+          <g id="Group-18-Copy-7" transform="translate(0.000000, 1.000000)" fill-rule="nonzero">
+            <path d="M12.5,12.3835435 L12.5,0.287989383" id="Line-9" stroke="#FFFFFF" stroke-linecap="square"></path>
+            <path d="M8.83612254,13.6715328 L1.07352009,123 L23.9182102,123 L15.3142868,13.6715328 L8.83612254,13.6715328 Z" id="Rectangle-10" stroke="#FFFFFF" stroke-width="2"></path>
+            <rect class="offset" id="Rectangle-21" stroke="#FFFFFF" stroke-width="1" x="8.03571429" y="12.6715328" width="7.14285714" height="1.81021898"></rect>
+            <rect class="offset" id="Rectangle-21-Copy" stroke="#FFFFFF" stroke-width="1" x="8.03571429" y="15.3868613" width="7.14285714" height="1.81021898"></rect>
+          </g>
+        </g>
+      </svg>
+      <svg class="tower tower-right">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Group-18-Copy-6" fill-rule="nonzero">
+            <path d="M21.5,21.5 L21.5,0.5" id="Line-9" stroke="#FFFFFF" stroke-linecap="square"></path>
+            <path d="M14.8429655,22 L1.07427991,214 L42.917362,214 L27.6564084,22 L14.8429655,22 Z" id="Rectangle-10" stroke="#FFFFFF" stroke-width="2"></path>
+            <rect class="offset" id="Rectangle-21" stroke="#FFFFFF" stroke-width="2" x="15" y="22" width="13" height="3"></rect>
+            <rect class="offset" id="Rectangle-21-Copy" stroke="#FFFFFF" stroke-width="2" x="15" y="27" width="13" height="3"></rect>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="rocket-ship" [ngClass]="{'launch-rocket': launchRocket}">
+      <svg class="rocket" [ngClass]="{'rocket-wobble': launchRocket}">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Group-6-Copy-3" transform="translate(1.000000, 2.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
+            <g id="Group-2">
+              <g id="Group-16">
+                <path d="M65.1600488,113.333333 C65.1600488,107.117198 65.1600488,90.5143664 65.1600488,63.5248384 C65.1600488,36.5353103 56.6189673,15.3603642 39.5368042,0" id="Path-16"></path>
+                <path d="M14.6478873,113.333333 C14.6478873,113.333333 14.6478873,108.078267 14.6478873,91.4754358 C14.6478873,35.574241 22.9441929,14.3992948 39.5368042,0" id="path-17"></path>
+                <circle id="Oval-2" cx="40" cy="61.4084507" r="12.9577465"></circle>
+                <polygon id="Path-25" points="65.5215669 76.0541373 79.9493838 92.6012324 79.9493838 123.908451 65.5215669 113.083187"></polygon>
+                <polygon id="Path-25" transform="translate(7.433979, 99.983495) scale(-1, 1) translate(-7.433979, -99.983495) " points="0.220070423 76.056338 14.6478873 92.6034331 14.6478873 123.910651 0.220070423 113.085387"></polygon>
+              </g>
+              <path d="M23.3301887,117.25 L57.6698113,117.25" id="Line" stroke-linecap="square"></path>
+              <path d="M29.3333333,123.208333 L53,123.208333" id="Line-Copy" stroke-linecap="square"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
   </div>
 </div>
+<button (click)="blastoff()">Launch</button>
+{{launchRocket}}
