@@ -174,16 +174,17 @@
     border: none;
     outline: none;
     transition: all 150ms ease-in-out;
-    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.6);
 
     &:hover {
-      background: #d30000;
+      background: #e70000;
       transition: all 150ms ease-in-out;
     }
 
     &:active {
       transform: translate(1px, 1px);
-      box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.9);
+      box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.9);
+      transition: all 150ms ease-in-out;
     }
   }
 }
