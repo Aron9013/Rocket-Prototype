@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="128px" viewBox="0 0 82 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6 Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-6-Copy-3" transform="translate(1.000000, 2.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
+            <g id="Group-2">
+                <g id="Group-16">
+                    <path d="M65.1600488,113.333333 C65.1600488,107.117198 65.1600488,90.5143664 65.1600488,63.5248384 C65.1600488,36.5353103 56.6189673,15.3603642 39.5368042,0 C22.9441929,14.3992948 14.6478873,35.574241 14.6478873,63.5248384 C14.6478873,91.4754358 14.6478873,108.078267 14.6478873,113.333333" id="Path-16"></path>
+                    <circle id="Oval-2" cx="40" cy="61.4084507" r="12.9577465"></circle>
+                    <polygon id="Path-25" points="65.5215669 76.0541373 79.9493838 92.6012324 79.9493838 123.908451 65.5215669 113.083187"></polygon>
+                    <polygon id="Path-25" transform="translate(7.433979, 99.983495) scale(-1, 1) translate(-7.433979, -99.983495) " points="0.220070423 76.056338 14.6478873 92.6034331 14.6478873 123.910651 0.220070423 113.085387"></polygon>
+                </g>
+                <path d="M23.3301887,117.25 L57.6698113,117.25" id="Line" stroke-linecap="square"></path>
+                <path d="M29.3333333,123.208333 L53,123.208333" id="Line-Copy" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>
