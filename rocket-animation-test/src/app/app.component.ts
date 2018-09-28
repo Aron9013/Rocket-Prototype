@@ -10,6 +10,9 @@ export class AppComponent {
 
   public blastoff(): void {
     this.launchRocket = true;
+    setTimeout(() => {
+      this.launchRocket = false
+    }, 4500);
   }
 
   public reset(): void {
