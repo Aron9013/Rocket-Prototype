@@ -13,13 +13,40 @@
       position: relative;
       width: 512px;
       height: 1000px;
-      background: linear-gradient(to bottom, #222222 0%, #006C90 60%, #2FB4E0 100%);
+      background: linear-gradient(to bottom, #0d191e 0%, #0f262b 40%, #006C90 80%, #2FB4E0 100%);
       transition: all 900ms ease-in-out;
       transition-delay: 500ms;
       transform: translateY(-50%);
 
       &.transition-sky {
         transform: translateY(0%);
+      }
+
+      .stars {
+        position: absolute;
+        bottom: 0;
+
+        .stars-1 {
+          position: absolute;
+          left: 110px;
+          bottom: 350px;
+        }
+
+        .stars-2 {
+          position: absolute;
+          left: 80px;
+          bottom: 520px;
+        }
+        .stars-3 {
+          position: absolute;
+          left: 67px;
+          bottom: 700px;
+        }
+        .stars-4 {
+          position: absolute;
+          left: 125px;
+          bottom: 900px;
+        }
       }
 
       .launch-pad {
@@ -101,11 +128,11 @@
         }
       }
 
-      .rocket-ship {
+      .rocket {
         position: absolute;
         bottom: 0;
 
-        .rocket {
+        .rocket-ship {
           position: absolute;
           bottom: 57px;
           left: 216px;
@@ -117,16 +144,68 @@
           animation-delay: 750ms;
         }
 
-        .rocket-wobble {
+        .rocket-trails {
+          position: absolute;
+          bottom: 25px;
+          left: 240px;
+          width: 36px;
+          height: 29px;
+
+          .rocket-trails-left, .rocket-trails-right {
+            stroke-dasharray: 60;
+            stroke-dashoffset: 60;
+            animation: dash 560ms ease-in infinite;
+            animation-delay: 550ms;
+          }
+
+          .rocket-trails-middle {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: dash 600ms ease-in infinite;
+            animation-delay: 550ms;
+          }
+        }
+
+        .rocket-shake {
           stroke-dashoffset: 0;
           animation: shake 450ms linear forwards;
         }
 
+        &.flight-wobble {
+          animation: wobble 600ms linear infinite;
+          animation-delay: 1000ms;
+        }
+
         &.launch-rocket {
+          animation: rocket 2000ms ease-in-out forwards;
+          animation-delay: 500ms;
+        }
+      }
+
+      .complete {
+
+        .circle {
           position: absolute;
-          bottom: 650px;
-          transition: bottom 800ms ease-in-out;
-          transition-delay: 500ms;
+          top: 150px;
+          left: 212px;
+          width: 83px;
+          height: 83px;
+          transform: rotate(-35deg);
+          stroke-dasharray: 260;
+          stroke-dashoffset: 260;
+          animation: dash 400ms ease-in-out forwards;
+          animation-delay: 2800ms
+        }
+
+        .tick {
+          position: absolute;
+          width: 50px;
+          top: 175px;
+          left: 233px;
+          stroke-dasharray: 150;
+          stroke-dashoffset: 150;
+          animation: dash 400ms ease-in-out forwards;
+          animation-delay: 3200ms;
         }
       }
     }
@@ -154,6 +233,31 @@
         transform: translateX(4px);
       }
     }
+
+    @keyframes wobble {
+      5%, 15%, 25%, 35%, 45% {
+        transform: translateX(-1px);
+      }
+
+      10%, 20%, 30%, 40% {
+        transform: translateX(1px);
+      }
+    }
+
+    @keyframes rocket {
+      40%{
+        bottom: 550px;
+        transition: bottom cubic-bezier(0.28, 1.32, 0.91, -0.12);
+      }
+      80% {
+        bottom: 680px;
+        transition: bottom cubic-bezier(0.86, 1.7, 0.33, -0.27);
+      }
+      100% {
+        bottom: 1050px;
+        transition: bottom cubic-bezier(0.93, 0, 1, 0.61);
+      }
+    }
   }
 }
 
@@ -163,6 +267,7 @@
   margin-top: 50px;
 
   .launch-button {
+    margin: 10px;
     height: 80px;
     width: 80px;
     display: flex;

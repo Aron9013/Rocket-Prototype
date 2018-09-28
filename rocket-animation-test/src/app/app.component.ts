@@ -11,4 +11,8 @@ export class AppComponent {
   public blastoff(): void {
     this.launchRocket = true;
   }
+
+  public reset(): void {
+    this.launchRocket = false;
+  }
 }
