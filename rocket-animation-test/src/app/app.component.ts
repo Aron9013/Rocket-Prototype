@@ -7,15 +7,27 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   public launchRocket: boolean = false;
+  public launchFail: boolean = false;
 
   public blastoff(): void {
     this.launchRocket = true;
-    setTimeout(() => {
-      this.launchRocket = false
-    }, 4500);
+    this._resetAfterSuccessAnimationEnd();
   }
 
-  public reset(): void {
-    this.launchRocket = false;
+  public failedLaunch(): void {
+    this.launchFail = true;
+    this._resetAfterFailureAnimationEnd();
+  }
+
+  private _resetAfterSuccessAnimationEnd(): void {
+    setTimeout(() => {
+      this.launchRocket = false;
+    }, 5500);
+  }
+
+  private _resetAfterFailureAnimationEnd(): void {
+    setTimeout(() => {
+      this.launchFail = false;
+    }, 4000);
   }
 }

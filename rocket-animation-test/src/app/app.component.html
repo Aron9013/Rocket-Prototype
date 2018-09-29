@@ -319,25 +319,26 @@
           </g>
         </svg>
       </div>
-      <div class="rocket" [ngClass]="{'launch-rocket flight-wobble': launchRocket}">
-        <svg class="rocket-ship" [ngClass]="{'rocket-shake': launchRocket}">
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="Group-6-Copy-3" transform="translate(1.000000, 2.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
-              <g id="Group-2">
-                <g id="Group-16">
-                  <path d="M65.1600488,113.333333 C65.1600488,107.117198 65.1600488,90.5143664 65.1600488,63.5248384 C65.1600488,36.5353103 56.6189673,15.3603642 39.5368042,0" id="Path-16"></path>
-                  <path d="M14.6478873,113.333333 C14.6478873,113.333333 14.6478873,108.078267 14.6478873,91.4754358 C14.6478873,35.574241 22.9441929,14.3992948 39.5368042,0" id="path-17"></path>
-                  <circle id="Oval-2" cx="40" cy="61.4084507" r="12.9577465"></circle>
-                  <polygon id="Path-25" points="65.5215669 76.0541373 79.9493838 92.6012324 79.9493838 123.908451 65.5215669 113.083187"></polygon>
-                  <polygon id="Path-25" transform="translate(7.433979, 99.983495) scale(-1, 1) translate(-7.433979, -99.983495) " points="0.220070423 76.056338 14.6478873 92.6034331 14.6478873 123.910651 0.220070423 113.085387"></polygon>
+      <div class="rocket" [ngClass]="{'launch-rocket': launchRocket, 'launch-failure': launchFail}">
+        <div class="rocket-inner" [ngClass]="{'flight-wobble': launchRocket, 'takeoff-failure': launchFail}">
+          <svg class="rocket-ship" [ngClass]="{'rocket-shake': launchRocket}">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Group-6-Copy-3" transform="translate(1.000000, 2.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
+                <g id="Group-2">
+                  <g id="Group-16">
+                    <path d="M65.1600488,113.333333 C65.1600488,107.117198 65.1600488,90.5143664 65.1600488,63.5248384 C65.1600488,36.5353103 56.6189673,15.3603642 39.5368042,0" id="Path-16"></path>
+                    <path d="M14.6478873,113.333333 C14.6478873,113.333333 14.6478873,108.078267 14.6478873,91.4754358 C14.6478873,35.574241 22.9441929,14.3992948 39.5368042,0" id="path-17"></path>
+                    <circle id="Oval-2" cx="40" cy="61.4084507" r="12.9577465"></circle>
+                    <polygon id="Path-25" points="65.5215669 76.0541373 79.9493838 92.6012324 79.9493838 123.908451 65.5215669 113.083187"></polygon>
+                    <polygon id="Path-25" transform="translate(7.433979, 99.983495) scale(-1, 1) translate(-7.433979, -99.983495) " points="0.220070423 76.056338 14.6478873 92.6034331 14.6478873 123.910651 0.220070423 113.085387"></polygon>
+                  </g>
+                  <path d="M23.3301887,117.25 L57.6698113,117.25" id="Line" stroke-linecap="square"></path>
+                  <path d="M29.3333333,123.208333 L53,123.208333" id="Line-Copy" stroke-linecap="square"></path>
                 </g>
-                <path d="M23.3301887,117.25 L57.6698113,117.25" id="Line" stroke-linecap="square"></path>
-                <path d="M29.3333333,123.208333 L53,123.208333" id="Line-Copy" stroke-linecap="square"></path>
               </g>
             </g>
-          </g>
-        </svg>
-        <div *ngIf="launchRocket">
+          </svg>
+          <div *ngIf="launchRocket">
           <svg class="rocket-trails">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
               <g id="feedback:-1" transform="translate(-1007.000000, -678.000000)" fill-rule="nonzero" stroke="#FFFFFF">
@@ -349,6 +350,16 @@
               </g>
             </g>
           </svg>
+        </div>
+          <div *ngIf="launchFail">
+            <svg class="cloud">
+              <g id="Layer_2">
+                <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M33.292,24.131c0-2.271-2.188-4.111-4.886-4.111 c-0.282,0-0.555,0.031-0.824,0.07c0-0.024,0.008-0.046,0.008-0.07c0-2.031-1.822-3.678-4.07-3.678s-4.07,1.646-4.07,3.678
+                  c0,0.012,0.004,0.023,0.004,0.036c-0.129-0.011-0.253-0.036-0.386-0.036c-2.459,0-4.453,1.841-4.453,4.111 c0,1.256,0.623,2.367,1.584,3.122c-0.215,0.397-0.345,0.827-0.345,1.28c0,1.963,2.22,3.553,4.958,3.553
+                  c0.632,0,1.231-0.092,1.787-0.247c0.844,1.097,2.213,1.817,3.771,1.817c2.567,0,4.648-1.941,4.648-4.338 c0-0.557-0.122-1.085-0.327-1.574C32.232,27.053,33.292,25.703,33.292,24.131z"></path>
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
       <div class="complete" *ngIf="launchRocket">
@@ -370,11 +381,36 @@
             </g>
           </g>
         </svg>
+        <div class="message">
+          <h3>Thank you!</h3>
+          <p>Your feedback has been received, and we will be in touch with you soon.</p>
+        </div>
+      </div>
+      <div class="failure" *ngIf="launchFail">
+        <svg class="circle">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="feedback:-2.5" transform="translate(-984.000000, -371.000000)" stroke="#FFFFFF" stroke-width="4">
+              <g id="Group" transform="translate(987.000000, 374.000000)">
+                <circle id="Oval-Copy" cx="38.5" cy="38.5" r="38.5"></circle>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <svg class="spanner">
+          <g id="Layer_3">
+            <path fill="none" stroke-width="3" stroke="#FFFFFF" stroke-miterlimit="10" d="M16.961,74.486l17.952-16.739c2.013,0.809,4.206,1.266,6.508,1.266 c9.648,0,17.471-7.822,17.471-17.471c0-1.362-0.171-2.682-0.466-3.954l-1.346,5.394l-11.799,3.473l-8.788-8.606l3.011-12.078
+		        l4.867-1.432c-0.961-0.164-1.942-0.268-2.95-0.268c-9.649,0-17.471,7.822-17.471,17.471c0,1.807,0.274,3.549,0.784,5.188 L6.731,63.517"></path>
+          </g>
+        </svg>
+        <div class="message">
+          <h3>Something has gone wrong</h3>
+          <p>Unfortunately, an error has occurred, please try again.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <div class="button-container">
   <button class="launch-button" (click)="blastoff()">Launch</button>
-  <button class="launch-button" (click)="reset()">Reset</button>
+  <button class="launch-button" (click)="failedLaunch()">Fail</button>
 </div>
